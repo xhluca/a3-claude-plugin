@@ -5,7 +5,7 @@
   },
   "plugins": [
     {
-      "name": "xhluca",
+      "name": "a3",
       "source": "./",
       "description": "Agent-as-Annotators (A3): Run web agents in BrowserGym's interactive chat mode",
       "version": "0.1.0",

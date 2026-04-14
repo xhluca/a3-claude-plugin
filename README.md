@@ -6,19 +6,19 @@ A [Claude Code](https://claude.com/claude-code) plugin for running [Agent-as-Ann
 
 ```
 /plugin marketplace add xhluca/a3-claude-plugin
-/plugin install xhluca
+/plugin install a3
 ```
 
 ## Usage
 
 ```
-/xhluca:a3-chat
+/a3:a3-chat
 ```
 
 With options:
 
 ```
-/xhluca:a3-chat --vllm-url https://your-vllm-endpoint.com/v1 --model your-model-name --start-url https://www.google.com
+/a3:a3-chat --vllm-url https://your-vllm-endpoint.com/v1 --model your-model-name --start-url https://www.google.com
 ```
 
 ### What it does
