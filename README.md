@@ -9,6 +9,12 @@ A [Claude Code](https://claude.com/claude-code) plugin for running [Agent-as-Ann
 /plugin install a3
 ```
 
+To update to the latest version:
+
+```
+/plugin update a3
+```
+
 ## Usage
 
 ```
