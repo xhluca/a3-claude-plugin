@@ -12,13 +12,13 @@ A [Claude Code](https://claude.com/claude-code) plugin for running [Agent-as-Ann
 ## Usage
 
 ```
-/a3:a3-chat
+/a3:chat
 ```
 
 With options:
 
 ```
-/a3:a3-chat --vllm-url https://your-vllm-endpoint.com/v1 --model your-model-name --start-url https://www.google.com
+/a3:chat --vllm-url https://your-vllm-endpoint.com/v1 --model your-model-name --start-url https://www.google.com
 ```
 
 ### What it does

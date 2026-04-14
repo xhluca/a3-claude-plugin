@@ -1,5 +1,5 @@
 ---
-name: a3-chat
+name: chat
 description: Set up and launch an Agent-as-Annotators (A3) web agent in BrowserGym's interactive chat mode. Use when the user wants to run an A3 agent interactively in a browser, chat with a web agent, or test a vLLM-served model in BrowserGym.
 argument-hint: "[--vllm-url URL] [--model MODEL] [--start-url URL]"
 ---
