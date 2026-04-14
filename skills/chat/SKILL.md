@@ -52,7 +52,7 @@ bg-chat --base-url <BASE_URL> [--model <MODEL>] [--start-url <START_URL>]
 
 Replace `<BASE_URL>`, `<MODEL>`, and `<START_URL>` with the resolved argument values. If `--model` was not provided, omit it (bg-chat auto-detects from the endpoint).
 
-The viewport is 720x720 (1:1 ratio) by default.
+The viewport is 1024x720 by default.
 
 ### 4. Report to the user
 
