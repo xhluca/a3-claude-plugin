@@ -12,6 +12,7 @@ A [Claude Code](https://claude.com/claude-code) plugin for running [Agent-as-Ann
 To update to the latest version:
 
 ```
+/plugin marketplace update
 /plugin update a3
 ```
 
