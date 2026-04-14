@@ -8,7 +8,7 @@
       "name": "a3",
       "source": "./",
       "description": "Agent-as-Annotators (A3): Run web agents in BrowserGym's interactive chat mode",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "author": {
         "name": "Xing Han Lu"
       },
