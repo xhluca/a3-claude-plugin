@@ -86,6 +86,16 @@ The server will start at `http://localhost:8080` with an OpenAI-compatible API.
 /a3:chat --base-url http://localhost:8080/v1
 ```
 
+### Example
+
+```
+/a3:chat --base-url http://localhost:8080/v1 --start-url https://flights.google.com
+```
+
+Then in the chat, type:
+
+> Show me the 3 cheapest flights from Montreal to Rio de Janeiro for April 22 to 28, under 2 layovers
+
 ## License
 
 MIT
