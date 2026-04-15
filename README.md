@@ -50,6 +50,42 @@ With options:
 - [A3-Synth Dataset](https://huggingface.co/datasets/McGill-NLP/A3-Synth)
 - [A3 Models](https://huggingface.co/collections/McGill-NLP/a3-agent-as-annotators-69d854ab5b1993b10efc3fba)
 
+## Running locally on Mac
+
+You can self-host the A3 model on your Mac using [llama.cpp](https://github.com/ggerganov/llama.cpp) with a 4-bit GGUF quantization from [mradermacher/A3-Qwen3.5-9B-GGUF](https://huggingface.co/mradermacher/A3-Qwen3.5-9B-GGUF).
+
+### 1. Install llama.cpp
+
+```bash
+brew install llama.cpp
+```
+
+### 2. Download the model
+
+Download the Q4_K_M quantization (~5.7 GB) and the multimodal projector:
+
+```bash
+huggingface-cli download mradermacher/A3-Qwen3.5-9B-GGUF A3-Qwen3.5-9B.Q4_K_M.gguf --local-dir .
+huggingface-cli download mradermacher/A3-Qwen3.5-9B-GGUF mmproj-A3-Qwen3.5-9B-f16.gguf --local-dir .
+```
+
+### 3. Start the server
+
+```bash
+llama-server \
+  --model A3-Qwen3.5-9B.Q4_K_M.gguf \
+  --mmproj mmproj-A3-Qwen3.5-9B-f16.gguf \
+  --port 8080
+```
+
+The server will start at `http://localhost:8080` with an OpenAI-compatible API.
+
+### 4. Use with the plugin
+
+```
+/a3:chat --base-url http://localhost:8080/v1
+```
+
 ## License
 
 MIT
