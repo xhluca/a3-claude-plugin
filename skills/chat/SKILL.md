@@ -51,7 +51,7 @@ If `$DISPLAY` is already set, skip this step entirely.
 bg-chat --base-url <BASE_URL> [--model <MODEL>] [--start-url <START_URL>] [--ui <UI>]
 ```
 
-Replace `<BASE_URL>`, `<MODEL>`, `<START_URL>`, and `<UI>` with the resolved argument values. If `--model` was not provided, omit it (bg-chat auto-detects from the endpoint). If `--ui` was not provided, omit it (defaults to `overlay`).
+Replace `<BASE_URL>`, `<MODEL>`, `<START_URL>`, and `<UI>` with the resolved argument values. If `--model` was not provided, omit it (bg-chat auto-detects from the endpoint). If `--ui` was not provided, omit it (defaults to `window`).
 
 The viewport is 1470x720 by default.
 
@@ -62,3 +62,11 @@ Tell the user:
 - How to interact (if display is forwarded) or how to set up VNC/noVNC to view the browser
 - The process PID so they can stop it later with `kill <PID>`
 - Type "exit" in the chat to stop the session
+
+## Example tasks for A3-Qwen
+
+Suggest one of these to the user when they're not sure what to ask the agent:
+
+- **`flights.google.com`** — *show me the 3 cheapest flights from sf to rio for april 22-28 with 2 stops or less*
+- **`booking.com`** — *what are the 3 cheapest stays with rating of 8+ in Rio for april 22-28? focus on hotels with breakfast included*
+- **`resy.com`** — *find 3 highly-rated japanese restaurants in LA with availability for 2 people on April 23*
