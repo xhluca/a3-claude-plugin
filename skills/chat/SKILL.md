@@ -16,7 +16,7 @@ Parse the following from `$ARGUMENTS`:
 - `--base-url`: vLLM endpoint URL (default: `https://a3-qwen-vllm.mcgill-nlp.org/v1`)
 - `--model`: Model name served at the endpoint (default: auto-detected from `/v1/models`)
 - `--start-url`: Starting URL for the browser (default: `about:blank`)
-- `--ui`: `overlay` (chat injected into the page via a Chrome extension, single window — default) or `window` (chat in a separate Chromium window)
+- `--ui`: `window` (chat in a separate Chromium window — default, recommended) or `overlay` (chat injected into the page via a Chrome extension, single window; experimental, may break on sites with strict CSP or custom layouts)
 
 ## Steps
 
