@@ -1,7 +1,7 @@
 ---
 name: chat
 description: Set up and launch a web agent in interactive chat mode using bg-chat-minimal. Use when the user wants to chat with a web agent, test a vLLM-served model interactively, or run an A3 agent in the browser.
-argument-hint: "[--base-url URL] [--model MODEL] [--start-url URL]"
+argument-hint: "[--base-url URL] [--model MODEL] [--start-url URL] [--ui overlay|window]"
 ---
 
 # Interactive Chat Mode
@@ -15,7 +15,8 @@ Launch a web agent in interactive chat mode. The agent opens a browser and a cha
 Parse the following from `$ARGUMENTS`:
 - `--base-url`: vLLM endpoint URL (default: `https://a3-qwen-vllm.mcgill-nlp.org/v1`)
 - `--model`: Model name served at the endpoint (default: auto-detected from `/v1/models`)
-- `--start-url`: Starting URL for the browser (default: `https://www.google.com`)
+- `--start-url`: Starting URL for the browser (default: `about:blank`)
+- `--ui`: `overlay` (chat injected into the page via a Chrome extension, single window — default) or `window` (chat in a separate Chromium window)
 
 ## Steps
 
@@ -47,12 +48,12 @@ If `$DISPLAY` is already set, skip this step entirely.
 ### 3. Launch
 
 ```bash
-bg-chat --base-url <BASE_URL> [--model <MODEL>] [--start-url <START_URL>]
+bg-chat --base-url <BASE_URL> [--model <MODEL>] [--start-url <START_URL>] [--ui <UI>]
 ```
 
-Replace `<BASE_URL>`, `<MODEL>`, and `<START_URL>` with the resolved argument values. If `--model` was not provided, omit it (bg-chat auto-detects from the endpoint).
+Replace `<BASE_URL>`, `<MODEL>`, `<START_URL>`, and `<UI>` with the resolved argument values. If `--model` was not provided, omit it (bg-chat auto-detects from the endpoint). If `--ui` was not provided, omit it (defaults to `overlay`).
 
-The viewport is 1024x720 by default.
+The viewport is 1470x720 by default.
 
 ### 4. Report to the user
 
